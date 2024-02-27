@@ -1,3 +1,5 @@
+import sys
+
 ventas = { "Enero": 15000, 
           "Febrero": 22000, 
           "Marzo": 12000, 
@@ -11,7 +13,8 @@ ventas = { "Enero": 15000,
           "Noviembre": 91000, 
           "Diciembre": 21000, }
 
-limite_ventas = int(input("Ingrese el límite de ventas: "))
+limite_ventas = int(sys.argv[1]) # fijar valor inicial. Permite agregar argumento desde consola.
+#limite_ventas = int(input("Ingrese el límite de ventas: "))
 
 # Recorrer diccionario: for mes, venta in ventas.items()
 ventas_filtradas = {mes: venta for mes, venta in ventas.items() if venta >= limite_ventas}
