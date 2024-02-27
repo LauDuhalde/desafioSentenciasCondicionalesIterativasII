@@ -2,11 +2,9 @@
 #En caso de respuesta no valida le pedirá reingreso hasta que sea valido
 def validar_respuesta(respuesta):
     #Se ejecuta hasta dar termino con return
-    while True:
-        if respuesta== "si" or respuesta == "no":
-            return respuesta
-        else:
-            respuesta = input("Por favor, ingrese 'si' o 'no' (sin comillas): ").lower()
+    while respuesta!= "si" and respuesta != "no":
+        respuesta = input("Por favor, ingrese 'si' o 'no' (sin comillas): ").lower()
+    return respuesta
 
 #Programa principal
 print("Responda 'si' o 'no' (sin comillas) a las siguientes preguntas para entregar los pasos a seguir")
